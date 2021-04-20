@@ -546,14 +546,12 @@ footer {
   right: 8px;
   top: 8px;
 
-  display: inline-flex;
-  align-items: center;
-
-  padding-left: 0;
-  padding-right: 0;
-
+  padding: 0;
+  display: block;
+  box-sizing: border-box;
   width: 30px;
   height: 30px;
+
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--main-white-color);
@@ -561,8 +559,11 @@ footer {
 }
 
 .icon-close {
+  display: inline-flex;
   position: relative;
-  transform: translate(27%, 0%);
+  width: 18px;
+  height: 18px;
+  top: 2px;
 }
 /* -------------------------Страница портфолио------------------------------ */
 
