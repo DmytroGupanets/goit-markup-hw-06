@@ -124,7 +124,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-item:nth-child(-n + 2) {
+.nav-item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -248,14 +248,15 @@ body {
 
 .features-list.list {
   display: flex;
+  flex-wrap: wrap;
+
+  margin-right: -30px;
 }
 
 .features-item {
-  width: 270px;
-}
-
-.features-item:not(:nth-child(4n)) {
   margin-right: 30px;
+
+  flex-basis: calc((100% - 120px) / 4);
 }
 
 .features-title {
@@ -284,15 +285,14 @@ body {
 
 .our-work-list {
   display: flex;
-  justify-content: center;
-}
-
-.our-work-item:not(:nth-child(3n)) {
-  margin-right: 30px;
+  flex-wrap: wrap;
+  margin-right: -30px;
 }
 
 .our-work-item {
   position: relative;
+  margin-right: 30px;
+  flex-basis: calc((100% - 90px) / 3);
 }
 
 .our-work-title {
@@ -325,9 +325,14 @@ body {
 .our-team-list.list {
   display: flex;
   flex-wrap: wrap;
+
+  margin-right: -30px;
 }
 
 .our-team-item {
+  margin-right: 30px;
+  flex-basis: calc((100% - 120px) / 4);
+
   background-color: var(--main-white-color);
   padding-bottom: 30px;
   border-radius: 4px;
@@ -335,10 +340,6 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-
-.our-team-item:nth-child(-n + 3) {
-  margin-right: 30px;
 }
 
 .our-team-name {
@@ -367,7 +368,7 @@ body {
   justify-content: center;
 }
 
-.social-contact-item:nth-child(-n + 3) {
+.social-contact-item:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -395,10 +396,14 @@ body {
 /* Our clients section */
 .clients.list {
   display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
 }
 
-.company-item:nth-child(-n + 5) {
+.company-item {
   margin-right: 30px;
+
+  flex-basis: calc((100% - 180px) / 6);
 }
 
 .company.link {
@@ -406,7 +411,6 @@ body {
   justify-content: center;
   align-items: center;
 
-  width: 170px;
   height: 72px;
   fill: var(--main-icon-color);
 
@@ -793,7 +797,7 @@ footer {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-button-item:not(:nth-child(5n)) {
+.filter-button-item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -816,10 +820,9 @@ footer {
 }
 
 .example-card {
-  flex-basis: calc(100% / 3 - 30px);
-
   margin-right: 30px;
   margin-bottom: 30px;
+  flex-basis: calc((100% - 90px) / 3);
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
